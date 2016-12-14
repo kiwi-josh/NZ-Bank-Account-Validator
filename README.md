@@ -1,6 +1,6 @@
 # NZ Bank Account Validator
 
-v0.0.1 - A small, zero dependency Javascript NZ bank account validation library that runs everywhere.
+v0.0.2 - A small, zero dependency Javascript NZ bank account validation library that runs everywhere.
 
 It is based on the [documentation](https://www.ird.govt.nz/resources/d/8/d8e49dce-1bda-4875-8acf-9ebf908c6e17/rwt-nrwt-spec-2014.pdf) provided by the Inland Revenue Department.
 This library is not however affiliated with or endorsed by the IRD.
