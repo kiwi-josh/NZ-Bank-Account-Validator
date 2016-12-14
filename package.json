@@ -1,5 +1,5 @@
 {
-  "name": "NZ-Bank-Account-Validator",
+  "name": "nz-bank-account-validator",
   "version": "0.0.1",
   "description": "A small, zero dependency NZ bank account validation library that runs everywhere.",
   "main": "lib/NzBankAccountValidator.min.js",

@@ -1,6 +1,6 @@
 # NZ Bank Account Validator
 
-A small, zero dependency Javascript NZ bank account validation library that runs everywhere.
+v0.0.1 - A small, zero dependency Javascript NZ bank account validation library that runs everywhere.
 
 It is based on the [documentation](https://www.ird.govt.nz/resources/d/8/d8e49dce-1bda-4875-8acf-9ebf908c6e17/rwt-nrwt-spec-2014.pdf) provided by the Inland Revenue Department.
 This library is not however affiliated with or endorsed by the IRD.
@@ -20,13 +20,13 @@ Using npm:
 
 ```shell
 $ npm i -g npm
-$ npm i --save NZ-Bank-Account-Validator
+$ npm i --save nz-bank-account-validator
 ```
 
 In Node.js:
 
 ```js
-const bankValidator = require('NZ-Bank-Account-Validator');
+const bankValidator = require('nz-bank-account-validator');
 
 bankValidator.validate('01-902-0068389-00');
 // => true
@@ -34,8 +34,8 @@ bankValidator.validate('01-902-0068389-00');
 
 ## Usage
 
-```script
-const bankValidator = require('NZ-Bank-Account-Validator');
+```js
+const bankValidator = require('nz-bank-account-validator');
 
 bankValidator.getId('01-902-0068389-00'); // '01'
 bankValidator.getBranch('01-902-0068389-00'); // '02'
