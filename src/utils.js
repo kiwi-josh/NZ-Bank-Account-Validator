@@ -15,7 +15,7 @@ const inRanges = (value, ranges = []) => {
     const [ start, end ] = range;
 
     return bool || inRange(start, value, end);
-  }, true);
+  }, false);
 };
 
 const sumChars = int => {
