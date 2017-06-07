@@ -31,6 +31,7 @@ export default {
   },
 
   isPartsObject(obj = {}) {
+    if (typeof obj !== 'object') return false;
     const inputsKeys = Object.keys(obj);
     const requiredKeys = Object.keys(partConstants);
     const filteredKeys = requiredKeys.filter(k => inputsKeys.includes(k));
