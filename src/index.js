@@ -101,7 +101,11 @@ export default {
     // VALIDATION - STEP 1
     // https://www.ird.govt.nz/resources/d/8/d8e49dce-1bda-4875-8acf-9ebf908c6e17/rwt-nrwt-spec-2014.pdf (PAGE 10)
 
-    const algorithm = this.getChecksum(this.getBankData(id, branch), base);
+    const bankData = this.getBankData(id, branch);
+    
+    if (!bankData) { return false; }
+    
+    const algorithm = this.getChecksum(bankData, base);
 
     if (!algorithm) { return false; }
 
