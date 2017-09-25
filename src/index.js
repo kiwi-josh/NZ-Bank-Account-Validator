@@ -1,8 +1,8 @@
-import { 
+import {
   partConstants,
   partIndexes,
   partMaxLengths,
-  bankData, 
+  bankData,
   bankChecksums
 } from './constants';
 
@@ -41,7 +41,7 @@ export default {
 
   splitString(str = '') {
     const parts = isString(str) ? str.split(/[^0-9]/) : [];
-    
+
     // If the input string had no delimiters, and its length is
     // long enough, manually forge an array.
     if (parts.length === 1) {
@@ -93,26 +93,26 @@ export default {
   validate(input) {
     const partsObject = this.getPartsObject(input);
 
-    if (!this.partsObjectValid(partsObject)) { 
-      return false; 
+    if (!this.partsObjectValid(partsObject)) {
+      return false;
     }
-    
+
     const { id, branch, base } = partsObject;
 
     // VALIDATION - STEP 1
     // https://www.ird.govt.nz/resources/d/8/d8e49dce-1bda-4875-8acf-9ebf908c6e17/rwt-nrwt-spec-2014.pdf (PAGE 10)
 
     const bankData = this.getBankData(id, branch);
-    
+
     if (!bankData) { return false; }
-    
+
     const algorithm = this.getChecksum(bankData, base);
 
     if (!algorithm) { return false; }
 
     // VALIDATION - STEP 2
     // https://www.ird.govt.nz/resources/d/8/d8e49dce-1bda-4875-8acf-9ebf908c6e17/rwt-nrwt-spec-2014.pdf (PAGE 11)
-     
+
     const { weighting, modulo, specialCase } = algorithm;
     const earlyExit = !specialCase;
 
@@ -121,12 +121,12 @@ export default {
 
       if (earlyExit || multiplied < 10) {
         return result + multiplied;
-      } 
+      }
 
       const summed = sumChars(multiplied);
       const summedTwice = sumChars(summed);
       const final = summed < 10 ? summed : summedTwice;
-      
+
       return result + final;
     }, 0);
 

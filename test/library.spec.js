@@ -77,6 +77,7 @@ const validateTests = [
 	['Object missing suffix', 'validate', [{ id: '01', branch: '902', base: '0068389' }], false],
 
 	['Number instead of string or object', 'validate', [12345678], false],
+	['Invalid random test', 'validate', ['01-9999-12312311-111'], false]
 ];
 
 const groupedTests = [
@@ -94,7 +95,7 @@ groupedTests.forEach(([groupLabel, tests]) => {
 
 		tests.forEach(([label, fn, inputs, outcome]) => {
 			it(`${label}. Expect function '${fn}' with inputs ${JSON.stringify(inputs)} to equal ${JSON.stringify(outcome)}`, () => {
-				expect(Library[fn](...inputs)).to.be.deep.equal(outcome);		
+				expect(Library[fn](...inputs)).to.be.deep.equal(outcome);
 			});
 		});
 
