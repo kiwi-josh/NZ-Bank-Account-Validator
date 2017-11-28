@@ -11,8 +11,13 @@ This library is not however affiliated with or endorsed by the IRD.
 Using npm:
 
 ```shell
-$ npm i -g npm
 $ npm i --save nz-bank-account-validator
+```
+
+Using yarn:
+
+```shell
+$ yarn add nz-bank-account-validator
 ```
 
 ### Installation
@@ -23,16 +28,16 @@ _(See examples/browser.html for code example)_
 ```html
 <script type="text/javascript" src="NZ-Bank-Account-Validator.min.js"></script>
 <script type="text/javascript">
-	var bankAccountValidator = window['NZ-Bank-Account-Validator'];
+  var bankAccountValidator = window['NZ-Bank-Account-Validator'];
 
-	bankAccountValidator.validate('01-902-0068389-00');
+  bankAccountValidator.validate('01-902-0068389-00');
 </script>
 ```
 
 In Node.js (require):
 
 ```js
-const bankValidator = require('nz-bank-account-validator');
+const bankValidator = require('nz-bank-account-validator/lib/NZ-Bank-Account-Validator');
 
 bankValidator.validate('01-902-0068389-00');
 // => true
@@ -41,7 +46,7 @@ bankValidator.validate('01-902-0068389-00');
 ES6 Modules:
 
 ```js
-import bankValidator from 'nz-bank-account-validator';
+import bankValidator from 'nz-bank-account-validator/lib/NZ-Bank-Account-Validator';
 
 bankValidator.validate('01-902-0068389-00');
 // => true
@@ -50,7 +55,7 @@ bankValidator.validate('01-902-0068389-00');
 ## Usage
 
 ```js
-const bankValidator = require('nz-bank-account-validator');
+const bankValidator = require('nz-bank-account-validator/lib/NZ-Bank-Account-Validator');
 
 bankValidator.getId('01-902-0068389-00'); // '01'
 bankValidator.getBranch('01-902-0068389-00'); // '02'
