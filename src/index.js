@@ -100,7 +100,10 @@ export default {
     const { id, branch, base } = partsObject;
 
     // VALIDATION - STEP 1
-    // https://www.ird.govt.nz/resources/d/8/d8e49dce-1bda-4875-8acf-9ebf908c6e17/rwt-nrwt-spec-2014.pdf (PAGE 10)
+    /*
+      https://web.archive.org/web/20181009211542/https://www.ird.govt.nz/resources/9/d/9d739cde-ad76-4c49-ae08
+      -522c62d94dd6/rwt-nrwt-spec-2016.pdf (PAGE 10)
+    */
 
     const bankData = this.getBankData(id, branch);
 
@@ -111,7 +114,10 @@ export default {
     if (!algorithm) { return false; }
 
     // VALIDATION - STEP 2
-    // https://www.ird.govt.nz/resources/d/8/d8e49dce-1bda-4875-8acf-9ebf908c6e17/rwt-nrwt-spec-2014.pdf (PAGE 11)
+    /*
+      https://web.archive.org/web/20181009211542/https://www.ird.govt.nz/resources/9/d/9d739cde-ad76-4c49-ae08
+      -522c62d94dd6/rwt-nrwt-spec-2016.pdf (PAGE 11)
+    */
 
     const { weighting, modulo, specialCase } = algorithm;
     const earlyExit = !specialCase;

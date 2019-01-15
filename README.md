@@ -2,7 +2,7 @@
 
 v0.0.4 - A small, zero dependency Javascript NZ bank account validation library that runs everywhere.
 
-It is based on the [documentation](https://www.ird.govt.nz/resources/3/5/358df412-098e-44d5-9673-4c85551d9af9/rwt-nrwt-spec-2014.pdf) provided by the Inland Revenue Department.
+It is based on the [documentation](https://web.archive.org/web/20181009211542/https://www.ird.govt.nz/resources/9/d/9d739cde-ad76-4c49-ae08-522c62d94dd6/rwt-nrwt-spec-2016.pdf) provided by the Inland Revenue Department.
 This library is not however affiliated with or endorsed by the IRD.
 
 
@@ -92,4 +92,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## References
 
-* [IRD - Validating Bank Account Numbers](https://www.ird.govt.nz/resources/3/5/358df412-098e-44d5-9673-4c85551d9af9/rwt-nrwt-spec-2014.pdf)
+* [IRD - Validating Bank Account Numbers](https://web.archive.org/web/20181009211542/https://www.ird.govt.nz/resources/9/d/9d739cde-ad76-4c49-ae08-522c62d94dd6/rwt-nrwt-spec-2016.pdf)
