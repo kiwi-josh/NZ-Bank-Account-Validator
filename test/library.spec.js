@@ -65,10 +65,10 @@ const validateTests = [
 	['Random test 1', 'validate', ['12-3140-0171323-50'], true],
 	['Random test 2', 'validate', ['12-3141-325080-00'], true],
 	['Algorithm B test as new rule', 'validate', ['04-2020-1000000-00'], true],
-    ['Algorithm A test as new rule vlidate', 'validate', ['03-7351-110000-00'], true],
+	['Algorithm A test as new rule vlidate', 'validate', ['03-7351-110000-00'], true],
 
 	// Failure tests
-	['String missing branch, base and suffix', 'validate', ['02','01'], false],
+	['String missing branch, base and suffix', 'validate', ['02', '01'], false],
 	['String missing base and suffix', 'validate', ['01-902'], false],
 	['String missing suffix', 'validate', ['01-902-0068389'], false],
 
@@ -93,12 +93,10 @@ const groupedTests = [
 ];
 
 groupedTests.forEach(([groupLabel, tests]) => {
-
-	describe(groupLabel, function () {
-
-		tests.forEach(([label, fn, inputs, outcome]) => {
-			it(`${label}. Expect function '${fn}' with inputs ${JSON.stringify(inputs)} to equal ${JSON.stringify(outcome)}`, () => {
-				expect(Library[fn](...inputs)).to.be.deep.equal(outcome);
+	  describe(groupLabel, function () {
+		  tests.forEach(([label, fn, inputs, outcome]) => {
+			  it(`${label}. Expect function '${fn}' with inputs ${JSON.stringify(inputs)} to equal ${JSON.stringify(outcome)}`, () => {
+				  expect(Library[fn](...inputs)).to.be.deep.equal(outcome);
 			});
 		});
 

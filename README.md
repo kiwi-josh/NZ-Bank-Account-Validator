@@ -80,6 +80,8 @@ To run the tests locally:
 ```shell
 npm i
 npm run tests
+npm run testCoverage
+# check coverage
 ```
 
 ## Authors
