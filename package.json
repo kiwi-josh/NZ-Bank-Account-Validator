@@ -3,6 +3,7 @@
   "version": "0.0.4",
   "description": "A small, zero dependency NZ bank account validation library that runs everywhere.",
   "main": "lib/NzBankAccountValidator.min.js",
+  "types": "src/index.d.ts",
   "scripts": {
     "build": "webpack --mode=build",
     "dev": "webpack --progress --colors --watch --mode=dev",
