@@ -110,6 +110,8 @@ export default {
     if (!bankData) { return false; }
 
     const algorithm = this.getChecksum(bankData, base);
+    // console.info("algorithm",algorithm)
+    // console.info("bankData",bankData)
 
     if (!algorithm) { return false; }
 
