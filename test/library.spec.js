@@ -64,10 +64,11 @@ const validateTests = [
 	['Algorithm G test', 'validate', ['26-2600-0320871-032'], true],
 	['Random test 1', 'validate', ['12-3140-0171323-50'], true],
 	['Random test 2', 'validate', ['12-3141-325080-00'], true],
-	
+	['Algorithm B test as new rule', 'validate', ['04-2020-1000000-00'], true],
+	['Algorithm A test as new rule', 'validate', ['03-7351-110000-00'], true],
 
 	// Failure tests
-	['String missing branch, base and suffix', 'validate', ['02','01'], false],
+	['String missing branch, base and suffix', 'validate', ['02', '01'], false],
 	['String missing base and suffix', 'validate', ['01-902'], false],
 	['String missing suffix', 'validate', ['01-902-0068389'], false],
 
@@ -77,7 +78,9 @@ const validateTests = [
 	['Object missing suffix', 'validate', [{ id: '01', branch: '902', base: '0068389' }], false],
 
 	['Number instead of string or object', 'validate', [12345678], false],
-	['Invalid random test', 'validate', ['01-9999-12312311-111'], false]
+	['Invalid random test', 'validate', ['01-9999-12312311-111'], false],
+	['Algorithm A test as new rule invlidate', 'validate', ['03-7351-950000-00'], false]
+
 ];
 
 const groupedTests = [
@@ -90,12 +93,10 @@ const groupedTests = [
 ];
 
 groupedTests.forEach(([groupLabel, tests]) => {
-
-	describe(groupLabel, function () {
-
-		tests.forEach(([label, fn, inputs, outcome]) => {
-			it(`${label}. Expect function '${fn}' with inputs ${JSON.stringify(inputs)} to equal ${JSON.stringify(outcome)}`, () => {
-				expect(Library[fn](...inputs)).to.be.deep.equal(outcome);
+	  describe(groupLabel, function () {
+		  tests.forEach(([label, fn, inputs, outcome]) => {
+			  it(`${label}. Expect function '${fn}' with inputs ${JSON.stringify(inputs)} to equal ${JSON.stringify(outcome)}`, () => {
+				  expect(Library[fn](...inputs)).to.be.deep.equal(outcome);
 			});
 		});
 
