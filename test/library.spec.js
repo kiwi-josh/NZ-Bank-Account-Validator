@@ -65,7 +65,7 @@ const validateTests = [
 	['Random test 1', 'validate', ['12-3140-0171323-50'], true],
 	['Random test 2', 'validate', ['12-3141-325080-00'], true],
 	['Algorithm B test as new rule', 'validate', ['04-2020-1000000-00'], true],
-	['Algorithm A test as new rule vlidate', 'validate', ['03-7351-110000-00'], true],
+	['Algorithm A test as new rule', 'validate', ['03-7351-110000-00'], true],
 
 	// Failure tests
 	['String missing branch, base and suffix', 'validate', ['02', '01'], false],
