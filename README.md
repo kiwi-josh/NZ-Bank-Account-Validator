@@ -2,7 +2,7 @@
 
 ## Important: latest changes please refer to: RWT and NRWT Certificates / 2020 / Version 1.0 
 
-v0.0.4 - A small, zero dependency Javascript NZ bank account validation library that runs everywhere.
+v0.0.5 - A small, zero dependency Javascript NZ bank account validation library that runs everywhere.
 
 It is based on the [documentation](https://www.ird.govt.nz/-/media/project/ir/home/documents/digital-service-providers/software-providers/payroll-calculations-business-rules-specifications/payroll-calculations-and-business-rules-specification-2024-v1-1.pdf?modified=20230208203603&modified=20230208203603) provided by the Inland Revenue Department.
 This library is not however affiliated with or endorsed by the IRD.
